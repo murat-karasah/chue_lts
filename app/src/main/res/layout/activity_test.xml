@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/ask1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1-Toplantıların gözdesiyimdir." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2-Başkalarının duygularını anlayıp paylaşırım." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3-İşlerin doğru yapılmasını sağlarım." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4-Ruhsal dengem sık bozulur." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5-Olayları zihnimde canlandırmakta zorlanmam." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6-Çok konuşkan biri değilimdir." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7-Başkalarının sorunlarıyla ilgilenmiyorum." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8-Genellikle eşyaları yerine koymayı unuturum." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9-Genelde rahatımdır." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10-Soyut fikirlerle ilgilenmem." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11-Toplantılarda birçok farklı insanla konuşurum." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12-Başkalarının duygularını hissederim." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="13-Düzeni severim." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="14-Moralim çabuk bozulur." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15-Soyut fikirleri kavramakta zorlanırım." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16-Arka planda kalmayı tercih ederim." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="17-Başkalarıyla pek ilgilenmem." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18-İşleri karmakarışık yaparım." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="19-Nadiren kendimi sıkıntılı hissederim." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ask20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20-Hayal gücüm kuvvetli değildir." />
+
+            <RadioGroup
+                android:id="@+id/radioAsk20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3" />
+
+                <RadioButton
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/userAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hesap Oluştur" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

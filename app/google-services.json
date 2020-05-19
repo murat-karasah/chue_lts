@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "978954019645",
+    "firebase_url": "https://son-firebase.firebaseio.com",
+    "project_id": "son-firebase",
+    "storage_bucket": "son-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978954019645:android:13557f2c7aa3aaf6601b54",
+        "android_client_info": {
+          "package_name": "com.marun.chue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978954019645-bon0phfbrvgovimod2gkbpfrq75v022r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJEtnmbCQtbZDpATgozmIEYCCGpiTrumc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978954019645-bon0phfbrvgovimod2gkbpfrq75v022r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
