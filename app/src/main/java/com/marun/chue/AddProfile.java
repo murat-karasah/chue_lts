@@ -22,21 +22,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.DatabaseError;
-
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -47,7 +34,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddProfile extends AppCompatActivity {
-
     private EditText mAge ,mInfo;
     private Button mAdd;
     private ImageView mImage;
@@ -55,7 +41,6 @@ public class AddProfile extends AppCompatActivity {
     private DatabaseReference mCostomerDatabase;
     private String userId,age,info,profileImageUrl;
     private Uri resultUri;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +58,6 @@ public class AddProfile extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setType("image/*");
                 startActivityForResult(intent, 1);
-
             }
         });
         mAdd.setOnClickListener(new View.OnClickListener() {
@@ -82,13 +66,7 @@ public class AddProfile extends AppCompatActivity {
                 saveUserInfromation();
             }
         });
-
-
-
     }
-
-
-
     private void saveUserInfromation() {
         age = mAge.getText().toString();
         info = mInfo.getText().toString();
@@ -129,17 +107,14 @@ task.addOnSuccessListener(new OnSuccessListener<Uri>() {
         return;
     }
 });
-
                }
            });
-
 
         }else{}
         Intent intent = new Intent(AddProfile.this,Test.class);
         startActivity(intent);
         finish();
         return;
-
 
     }
     @Override
@@ -149,7 +124,6 @@ task.addOnSuccessListener(new OnSuccessListener<Uri>() {
             final Uri imageUri = data.getData();
             resultUri = imageUri;
             mImage.setImageURI(resultUri);    }}
-
     public void exit(View view){
         mAuth.signOut();
         Intent intent = new Intent(AddProfile.this,Login.class);

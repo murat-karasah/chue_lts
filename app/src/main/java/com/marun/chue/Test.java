@@ -5,19 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.HashMap;
 import java.util.Map;
-
 public class Test extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mCostomerDatabase;
@@ -58,7 +53,6 @@ public class Test extends AppCompatActivity {
         radioAsk18 = (RadioGroup) findViewById(R.id.radioAsk18);
         radioAsk19 = (RadioGroup) findViewById(R.id.radioAsk19);
         radioAsk20 = (RadioGroup) findViewById(R.id.radioAsk20);
-
         userAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +96,6 @@ public class Test extends AppCompatActivity {
                 float yourVoteAsk18=Float.parseFloat(selectedradioAsk18.getText().toString());
                 float yourVoteAsk19=Float.parseFloat(selectedradioAsk19.getText().toString());
                 float yourVoteAsk20=Float.parseFloat(selectedradioAsk20.getText().toString());
-
                 float neu= (yourVoteAsk4+((-1)*((-6)+yourVoteAsk9))+yourVoteAsk14+((-1)*((-6)+yourVoteAsk19))); //Neuroticism
                 float ext= (yourVoteAsk1+((-1)*((-6)+yourVoteAsk6))+yourVoteAsk11+((-1)*((-6)+yourVoteAsk16))); //Extraversion
                 float ope= (yourVoteAsk5+((-1)*((-6)+yourVoteAsk10))+((-1)*((-6)+yourVoteAsk15))+((-1)*((-6)+yourVoteAsk20))); //Openness:
@@ -114,7 +107,6 @@ public class Test extends AppCompatActivity {
                 String sOpe = new String("");
                 String sAgr = new String("");
                 String sCon = new String("");
-
                 if(ext>=11){
                      sExt= "E";
                 }
@@ -122,53 +114,39 @@ public class Test extends AppCompatActivity {
                      sExt= "I";
 
                 }
-
                 if(ope>=13){
                     sOpe= "N";
                 }
                 else{
                     sOpe= "S";
-
                 }
                 if(agr>=15){
                     sAgr= "F";
                 }
                 else{
                     sAgr= "T";
-
                 }
                 if(con>=11){
                     sCon= "J";
                 }
                 else{
                     sCon= "P";
-
                 }
                 if(neu>=9){
                     sNeu= "-";
                 }
                 else{
                     sNeu= "+";
-
                 }
                chars = sExt +sOpe+sAgr+ sCon;
                 Toast.makeText(Test.this, "Selected Radio Button is:" + sExt +sOpe+sAgr+ sCon , Toast.LENGTH_LONG).show();
-
                 saveUserInfromation();
-
             }
-
             private void saveUserInfromation() {
                 Map userInfo = new HashMap();
                 userInfo.put("Char",chars);
                 mCostomerDatabase.updateChildren(userInfo);
                 finish();}
-
-
         });
-
-
     }
-
-
 }

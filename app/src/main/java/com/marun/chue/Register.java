@@ -23,7 +23,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class Register extends AppCompatActivity {
     private Button mRegister;
     private EditText mName,mEmail,mPass;
@@ -48,7 +47,6 @@ public class Register extends AppCompatActivity {
                 }
             }
         };
-
         mRegister = (Button) findViewById(R.id.register);
         mName = (EditText) findViewById(R.id.name);
         mEmail = (EditText) findViewById(R.id.email);
@@ -80,26 +78,17 @@ public class Register extends AppCompatActivity {
                             userInfo.put("profileImageUrl","default");
                             userInfo.put("Char","default");
                             currentUserDb.updateChildren(userInfo);
-
-
                         }
                     }
                 });
-
-
             }
         });
-
-
-
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(firebaseAuthStateListener);
     }
-
     @Override
     protected void onStop() {
         super.onStop();
