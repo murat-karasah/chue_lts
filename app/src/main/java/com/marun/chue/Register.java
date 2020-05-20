@@ -57,7 +57,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 int selectId = mradioGroup.getCheckedRadioButtonId();
                 final RadioButton radioButton = (RadioButton) findViewById(selectId);
-                if (radioButton.getText()==null){
+                if (radioButton==null || radioButton.getText()==null){
                     return;
                 }
                 final  String email = mEmail.getText().toString();

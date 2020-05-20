@@ -44,6 +44,10 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 final  String email = mEmail.getText().toString();
                 final  String password = mPassword.getText().toString();
+                if(email.isEmpty()  || password.isEmpty() ){
+                    Toast.makeText(Login.this,"Email ve Şifre giriniz", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

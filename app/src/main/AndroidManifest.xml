@@ -14,8 +14,9 @@
         <activity android:name=".Test"></activity>
         <activity android:name=".AddProfile" />
         <activity android:name=".Register" />
-        <activity android:name=".Login" />
+        <activity android:name=".Login"/>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
