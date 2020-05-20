@@ -1,5 +1,6 @@
 package com.marun.chue;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class Register extends AppCompatActivity {
     private RadioGroup mradioGroup;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthStateListener;
-
+    private ProgressDialog progressdialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +44,6 @@ public class Register extends AppCompatActivity {
                     Intent intent = new Intent(Register.this,AddProfile.class);
                     startActivity(intent);
                     finish();
-                    ;
                 }
             }
         };
@@ -55,19 +55,48 @@ public class Register extends AppCompatActivity {
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressdialog = new ProgressDialog(Register.this);
+                progressdialog.show();
+                progressdialog.setContentView(R.layout.progress_dialog);
+                progressdialog.getWindow().setBackgroundDrawableResource(
+                        android.R.color.transparent
+                );
                 int selectId = mradioGroup.getCheckedRadioButtonId();
                 final RadioButton radioButton = (RadioButton) findViewById(selectId);
                 if (radioButton==null || radioButton.getText()==null){
+                    Toast.makeText(Register.this,"Cinsiyet boş bırakılamaz", Toast.LENGTH_LONG).show();
+                    progressdialog.dismiss();
                     return;
                 }
                 final  String email = mEmail.getText().toString();
                 final  String name = mName.getText().toString();
                 final  String password = mPass.getText().toString();
+                if(email.isEmpty() ){
+                    Toast.makeText(Register.this,"Email boş bırakılamaz", Toast.LENGTH_LONG).show();
+                    progressdialog.dismiss();
+                    return;
+                }
+                if(name.isEmpty() ){
+                    Toast.makeText(Register.this,"İsim boş bırakılamaz", Toast.LENGTH_LONG).show();
+                    progressdialog.dismiss();
+                    return;
+                }
+                if(password.isEmpty() ){
+                    Toast.makeText(Register.this,"Şifre boş bırakılamaz", Toast.LENGTH_LONG).show();
+                    progressdialog.dismiss();
+                    return;
+                }
+                if(password.length() < 8  ){
+                    Toast.makeText(Register.this,"Şifre 8 karakterden küçük olamaz", Toast.LENGTH_LONG).show();
+                    progressdialog.dismiss();
+                    return;
+                }
                 mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(!task.isSuccessful()){
-                            Toast.makeText(Register.this,"Kayıt Ol Hatalı", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Register.this,"Geçerli bir email adresi giriniz", Toast.LENGTH_LONG).show();
+                            progressdialog.dismiss();
                         }
                         else{
                             String userId = mAuth.getCurrentUser().getUid();
@@ -77,6 +106,7 @@ public class Register extends AppCompatActivity {
                             userInfo.put("sex",radioButton.getText().toString());
                             userInfo.put("profileImageUrl","default");
                             userInfo.put("Char","default");
+                            userInfo.put("Profile","1");
                             currentUserDb.updateChildren(userInfo);
                         }
                     }
@@ -93,5 +123,6 @@ public class Register extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         mAuth.removeAuthStateListener(firebaseAuthStateListener);
+        progressdialog.dismiss();
     }
 }

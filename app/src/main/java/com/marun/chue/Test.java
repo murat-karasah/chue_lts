@@ -2,6 +2,7 @@ package com.marun.chue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,8 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 public class Test extends AppCompatActivity {
@@ -18,7 +21,8 @@ public class Test extends AppCompatActivity {
     private DatabaseReference mCostomerDatabase;
     private String userId;
     private String chars;
-    RadioGroup radioAsk1,radioAsk2,radioAsk3,radioAsk4,radioAsk5,
+    private ArrayList list;
+    RadioGroup  radioAsk1,radioAsk2,radioAsk3,radioAsk4,radioAsk5,
     radioAsk6,radioAsk7,radioAsk8,radioAsk9,radioAsk10,radioAsk11,radioAsk12,radioAsk13,radioAsk14,radioAsk15,radioAsk16,radioAsk17,radioAsk18,radioAsk19,radioAsk20;
     RadioButton selectedradioAsk1,selectedradioAsk2,selectedradioAsk3,selectedradioAsk4,selectedradioAsk5,selectedradioAsk6,selectedradioAsk7,selectedradioAsk8,selectedradioAsk9,
             selectedradioAsk10,selectedradioAsk11,selectedradioAsk12,selectedradioAsk13,selectedradioAsk14,selectedradioAsk15,selectedradioAsk16,selectedradioAsk17,selectedradioAsk18,selectedradioAsk19,
@@ -145,6 +149,7 @@ public class Test extends AppCompatActivity {
             private void saveUserInfromation() {
                 Map userInfo = new HashMap();
                 userInfo.put("Char",chars);
+                userInfo.put("Profile","3");
                 mCostomerDatabase.updateChildren(userInfo);
                 finish();}
         });

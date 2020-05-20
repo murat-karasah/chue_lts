@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.net.Uri;
 import android.net.Uri;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -73,8 +74,21 @@ public class AddProfile extends AppCompatActivity {
         Map userInfo = new HashMap();
         userInfo.put("age",age);
         userInfo.put("info",info);
+        userInfo.put("Profile","2");
+        if(age.isEmpty() ){
+            Toast.makeText(AddProfile.this,"Yaş boş bırakılamaz", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(info.isEmpty() ){
+            Toast.makeText(AddProfile.this,"Hakkında", Toast.LENGTH_LONG).show();
+            return;
+        }
         mCostomerDatabase.updateChildren(userInfo);
-        if (resultUri != null){
+        if (resultUri == null){
+            Toast.makeText(AddProfile.this,"Lütfen profil resmi giriniz", Toast.LENGTH_LONG).show();
+            return;
+        }
+            if (resultUri != null){
             StorageReference filepath = FirebaseStorage.getInstance().getReference().child("profileImageUrl").child(userId);
             Bitmap bitmap = null;
             try {
@@ -96,7 +110,7 @@ public class AddProfile extends AppCompatActivity {
                @Override
                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                    Task<Uri> task = taskSnapshot.getMetadata().getReference().getDownloadUrl();
-task.addOnSuccessListener(new OnSuccessListener<Uri>() {
+                   task.addOnSuccessListener(new OnSuccessListener<Uri>() {
     @Override
     public void onSuccess(Uri uri) {
         String imageLink = uri.toString();
@@ -109,13 +123,11 @@ task.addOnSuccessListener(new OnSuccessListener<Uri>() {
 });
                }
            });
-
         }else{}
         Intent intent = new Intent(AddProfile.this,Test.class);
         startActivity(intent);
         finish();
         return;
-
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -126,7 +138,7 @@ task.addOnSuccessListener(new OnSuccessListener<Uri>() {
             mImage.setImageURI(resultUri);    }}
     public void exit(View view){
         mAuth.signOut();
-        Intent intent = new Intent(AddProfile.this,Login.class);
+        Intent intent = new Intent(AddProfile.this,MainActivity.class);
         startActivity(intent);
         finish();}
 }
