@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:showAsAction="always"
+    tools:context="com.marun.chue.Account">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#45072F"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:menu="@menu/menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        android:clipToPadding="false"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="221dp"
+                android:layout_height="198dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="20sp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20sp"
+                    android:background="@null"
+                    android:hint="Name" />
+
+                <TextView
+                    android:id="@+id/mAge"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20sp"
+                    android:background="@null"
+                    android:hint="Age"
+                    android:inputType="phone" />
+
+                <TextView
+                    android:id="@+id/mSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="cinsiyet" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Hakkında" />
+
+
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="50sp"
+
+                />
+
+            <com.appyvet.materialrangebar.RangeBar
+                android:id="@+id/rangebar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                app:mrb_barWeight="2dp"
+                app:mrb_connectingLineWeight="4dp"
+                app:mrb_leftThumbColor="#FFB300"
+                app:mrb_minThumbDistance="-1"
+                app:mrb_pinColor="#6c3f6a"
+                app:mrb_pinMaxFont="15sp"
+                app:mrb_pinMinFont="12sp"
+                app:mrb_pinRadius="14dp"
+                app:mrb_rangeBar="true"
+                app:mrb_rangeBarPaddingBottom="30dp"
+                app:mrb_rangeBar_rounded="true"
+                app:mrb_rightThumbColor="#1E88E5"
+                app:mrb_temporaryPins="true"
+                app:mrb_thumbBoundarySize="2dp"
+                app:mrb_thumbSize="10dp"
+                app:mrb_tickDefaultLabel="label"
+                app:mrb_tickEnd="55"
+                app:mrb_tickHeight="4dp"
+                app:mrb_tickInterval="1"
+                app:mrb_tickLabelSize="4sp"
+                app:mrb_tickStart="18" />
+            <Button
+                android:id="@+id/userAdd"
+                style="@style/BaseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yaşa göre ara" />
+
+            <Button
+                android:id="@+id/exit"
+                style="@style/BaseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="exit"
+                android:text="ÇIKIŞ YAP" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

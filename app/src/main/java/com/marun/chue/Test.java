@@ -2,6 +2,7 @@ package com.marun.chue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -21,15 +22,12 @@ public class Test extends AppCompatActivity {
     private DatabaseReference mCostomerDatabase;
     private String userId;
     private String chars;
-
     RadioGroup  radioAsk1,radioAsk2,radioAsk3,radioAsk4,radioAsk5,
     radioAsk6,radioAsk7,radioAsk8,radioAsk9,radioAsk10,radioAsk11,radioAsk12,radioAsk13,radioAsk14,radioAsk15,radioAsk16,radioAsk17,radioAsk18,radioAsk19,radioAsk20;
     RadioButton selectedradioAsk1,selectedradioAsk2,selectedradioAsk3,selectedradioAsk4,selectedradioAsk5,selectedradioAsk6,selectedradioAsk7,selectedradioAsk8,selectedradioAsk9,
             selectedradioAsk10,selectedradioAsk11,selectedradioAsk12,selectedradioAsk13,selectedradioAsk14,selectedradioAsk15,selectedradioAsk16,selectedradioAsk17,selectedradioAsk18,selectedradioAsk19,
             selectedradioAsk20;
     Button userAdd;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,88 +59,6 @@ public class Test extends AppCompatActivity {
         userAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (selectedradioAsk1==null || selectedradioAsk1.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 1.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk2==null || selectedradioAsk2.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 2.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk3==null || selectedradioAsk3.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 3.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk4==null || selectedradioAsk4.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 4.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk5==null || selectedradioAsk5.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 5.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk6==null || selectedradioAsk6.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 6.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk7==null || selectedradioAsk7.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 7.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk8==null || selectedradioAsk8.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 8.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk9==null || selectedradioAsk9.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 9.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk10==null || selectedradioAsk10.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 10.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk11==null || selectedradioAsk11.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 11.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk12==null || selectedradioAsk12.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 12.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk13==null || selectedradioAsk13.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 13.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk14==null || selectedradioAsk14.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 14.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk15==null || selectedradioAsk15.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 15.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk16==null || selectedradioAsk16.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 16.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk17==null || selectedradioAsk17.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 17.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk18==null || selectedradioAsk18.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 18.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk19==null || selectedradioAsk19.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 19.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-                if (selectedradioAsk20==null || selectedradioAsk20.getText()==null){
-                    Toast.makeText(Test.this,"Lütfen 20.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
-                    return;
-                }
-
-
                 selectedradioAsk1  = (RadioButton)findViewById(radioAsk1.getCheckedRadioButtonId());
                 selectedradioAsk2  = (RadioButton)findViewById(radioAsk2.getCheckedRadioButtonId());
                 selectedradioAsk3  = (RadioButton)findViewById(radioAsk3.getCheckedRadioButtonId());
@@ -163,6 +79,86 @@ public class Test extends AppCompatActivity {
                 selectedradioAsk18  = (RadioButton)findViewById(radioAsk18.getCheckedRadioButtonId());
                 selectedradioAsk19  = (RadioButton)findViewById(radioAsk19.getCheckedRadioButtonId());
                 selectedradioAsk20  = (RadioButton)findViewById(radioAsk20.getCheckedRadioButtonId());
+                if (selectedradioAsk1==null ){
+                    Toast.makeText(Test.this,"Lütfen 1.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk2==null){
+                    Toast.makeText(Test.this,"Lütfen 2.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk3==null ){
+                    Toast.makeText(Test.this,"Lütfen 3.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk4==null){
+                    Toast.makeText(Test.this,"Lütfen 4.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk5==null ){
+                    Toast.makeText(Test.this,"Lütfen 5.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk6==null ){
+                    Toast.makeText(Test.this,"Lütfen 6.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk7==null ){
+                    Toast.makeText(Test.this,"Lütfen 7.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk8==null ){
+                    Toast.makeText(Test.this,"Lütfen 8.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk9==null ){
+                    Toast.makeText(Test.this,"Lütfen 9.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk10==null){
+                    Toast.makeText(Test.this,"Lütfen 10.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk11==null ){
+                    Toast.makeText(Test.this,"Lütfen 11.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk12==null ){
+                    Toast.makeText(Test.this,"Lütfen 12.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk13==null ){
+                    Toast.makeText(Test.this,"Lütfen 13.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk14==null ){
+                    Toast.makeText(Test.this,"Lütfen 14.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk15==null){
+                    Toast.makeText(Test.this,"Lütfen 15.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk16==null ){
+                    Toast.makeText(Test.this,"Lütfen 16.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk17==null ){
+                    Toast.makeText(Test.this,"Lütfen 17.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk18==null ){
+                    Toast.makeText(Test.this,"Lütfen 18.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk19==null ){
+                    Toast.makeText(Test.this,"Lütfen 19.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (selectedradioAsk20==null){
+                    Toast.makeText(Test.this,"Lütfen 20.soruyu cevaplayınız", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 float yourVoteAsk1=Float.parseFloat(selectedradioAsk1.getText().toString());
                 float yourVoteAsk2=Float.parseFloat(selectedradioAsk2.getText().toString());
                 float yourVoteAsk3=Float.parseFloat(selectedradioAsk3.getText().toString());
@@ -226,8 +222,6 @@ public class Test extends AppCompatActivity {
                     sNeu= "+";
                 }
                chars = sExt +sOpe+sAgr+ sCon;
-
-
                 Toast.makeText(Test.this, "Selected Radio Button is:" + sExt +sOpe+sAgr+ sCon , Toast.LENGTH_LONG).show();
                 saveUserInfromation();
             }
@@ -236,6 +230,8 @@ public class Test extends AppCompatActivity {
                 userInfo.put("Char",chars);
                 userInfo.put("Profile","3");
                 mCostomerDatabase.updateChildren(userInfo);
+                Intent intent = new Intent(Test.this,MainMatchesActivity.class);
+                startActivity(intent);
                 finish();}
         });
     }

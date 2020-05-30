@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:showAsAction="always"
     android:layout_height="match_parent"
     tools:context=".Matches">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="exit"
-        android:text="Button" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:itemTextColor="#FFFFFF"
+        app:itemIconTint="#FFFFFF"
+        android:id="@+id/menu"
+        android:background="#45072F"
+        app:menu="@menu/menu"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menu"
+
+        android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

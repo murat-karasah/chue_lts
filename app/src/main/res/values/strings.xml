@@ -4,4 +4,7 @@
     <string name="ye_ol">Üye Ol</string>
     <string name="e_mail">E-mail</string>
     <string name="ifre">Şifre</string>
+    <string name="ye_olunuyor">Üye olunuyor...</string>
+    <string name="add">Bilgileriniz Kaydediliyor...</string>
+
 </resources>

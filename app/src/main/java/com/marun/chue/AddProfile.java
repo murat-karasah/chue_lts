@@ -1,6 +1,7 @@
 package com.marun.chue;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.net.Uri;
 import android.net.Uri;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,6 +39,8 @@ import java.util.Map;
 public class AddProfile extends AppCompatActivity {
     private EditText mAge ,mInfo;
     private Button mAdd;
+    private ProgressDialog progressdialog;
+
     private ImageView mImage;
     private FirebaseAuth mAuth;
     private DatabaseReference mCostomerDatabase;
@@ -69,6 +73,12 @@ public class AddProfile extends AppCompatActivity {
         });
     }
     private void saveUserInfromation() {
+        progressdialog = new ProgressDialog(AddProfile.this);
+        progressdialog.show();
+        progressdialog.setContentView(R.layout.progress_dialog);
+        progressdialog.getWindow().setBackgroundDrawableResource(
+                android.R.color.transparent
+        );
         age = mAge.getText().toString();
         info = mInfo.getText().toString();
         Map userInfo = new HashMap();

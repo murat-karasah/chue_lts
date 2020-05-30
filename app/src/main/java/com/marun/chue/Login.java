@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user !=null){
-                    Intent intent = new Intent(Login.this,AddProfile.class);
+                    Intent intent = new Intent(Login.this,MainMatchesActivity.class);
                     startActivity(intent);
                     finish();
                     return;
@@ -54,7 +54,6 @@ public class Login extends AppCompatActivity {
                         if(!task.isSuccessful()){
                             Toast.makeText(Login.this,"Giriş Yap Hatalı", Toast.LENGTH_LONG).show();
                         }
-
                     }
                 });
             }

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         register = (Button) findViewById(R.id.register) ;
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
         if (firebaseUser != null) {
-            Intent intent = new Intent(MainActivity.this,Matches.class);
+            Intent intent = new Intent(MainActivity.this,MainMatchesActivity.class);
             startActivity(intent);
             finish();
         }
