@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user !=null){
+                if (user !=null){ // eğer daha önceden oturum açıldıysa otomatik MainMatchesActivity ekranına gider
 
                     Intent intent = new Intent(Login.this,MainMatchesActivity.class);
                     startActivity(intent);
@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.pass);
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //mLogin butonuna tıklanırsa bu işlemler yapılacak
                 final  String email = mEmail.getText().toString();
                 final  String password = mPassword.getText().toString();
 
