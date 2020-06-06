@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/MatchImage"
+        android:layout_width="125sp"
+        android:layout_height="125sp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+
+        android:id="@+id/MatchId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Match's ID"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/MatchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="10sp"
+            android:paddingBottom="10sp"
+            android:text="Match's Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/LastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:paddingBottom="10sp"
+            android:text="TextView" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

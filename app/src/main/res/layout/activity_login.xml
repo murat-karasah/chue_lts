@@ -58,6 +58,7 @@
             android:layout_width="250dp"
             android:layout_height="43dp"
             android:layout_below="@id/register"
+            style="@style/BaseButton"
 
             android:layout_gravity="center"
             android:text="@string/giri_yap" />

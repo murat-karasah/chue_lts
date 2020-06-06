@@ -4,22 +4,25 @@
     <item
         android:id="@+id/user"
         android:icon="@drawable/ic_launcher_account_foreground"
+        android:iconTint="#FFFFFF"
 
-
-       />
+        app:itemIconSize="20dp" />
 
 
 
     <item
        android:id="@+id/home"
        android:icon="@drawable/ic_launcher_home_foreground"
+        app:itemIconSize="50sp"
 
+        android:iconTint="#FFFFFF"
 
         />
     <item
        android:id="@+id/matchs"
        android:icon="@drawable/ic_launcher_mail_foreground"
-       
+        android:iconTint="#FFFFFF"
+
         />
 
 

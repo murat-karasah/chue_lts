@@ -5,28 +5,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.ValueEventListener;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.marun.chue.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Matches extends AppCompatActivity {
     private RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerViewChatList;
     private RecyclerView.Adapter mMatchesAdapter;
+    private RecyclerView.Adapter mChatlistAdapter;
+    private RecyclerView.LayoutManager mChatListLayoutManager;
+    DatabaseReference  mDatabaseChat;
+    private String currentUserID;
     private RecyclerView.LayoutManager mMatchesLayoutManager;
     private String cusrrentUserID;
     BottomNavigationView mMenu;
@@ -54,25 +57,42 @@ public class Matches extends AppCompatActivity {
             }
         });
         cusrrentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        mRecyclerViewChatList = (RecyclerView) findViewById(R.id.recyclerViewChatList);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
      //   mRecyclerView.setNestedScrollingEnabled(false);
      //   mRecyclerView.setHasFixedSize(true);
+
+                mChatListLayoutManager = new LinearLayoutManager(Matches.this , LinearLayoutManager.VERTICAL, false);
+
         mMatchesLayoutManager = new LinearLayoutManager(Matches.this , LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerViewChatList.setLayoutManager(mChatListLayoutManager);
 
         mRecyclerView.setLayoutManager(mMatchesLayoutManager);
+        mChatlistAdapter = new ChatListAdapter (getDataSetChatList(), Matches.this);
         mMatchesAdapter = new MatchesAdapter(getDataSetMatches(), Matches.this);
+        mRecyclerViewChatList.setAdapter(mChatlistAdapter);
+
         mRecyclerView.setAdapter(mMatchesAdapter);
         getUserMatchId();
+        getChat();
+
+
     }
-    private void getUserMatchId() {
+
+
+
+    private void getChat() {
         DatabaseReference matchDb = FirebaseDatabase.getInstance().getReference().child("Users").child(cusrrentUserID).child("connections").child("matches");
         matchDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
                     for(DataSnapshot match : dataSnapshot.getChildren()){
-                        FetchMatchInformation(match.getKey());
-                    }
+                        if (match.child("Value").getValue().equals("2")){
+
+                        FetchChatInformation(match.getKey());
+                    } }
                 }
             }
             @Override
@@ -80,19 +100,41 @@ public class Matches extends AppCompatActivity {
             }
         });
     }
-    private void FetchMatchInformation(String key) {
+
+    private void getUserMatchId() {
+        DatabaseReference matchDb = FirebaseDatabase.getInstance().getReference().child("Users").child(cusrrentUserID).child("connections").child("matches");
+        matchDb.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+
+                    for(DataSnapshot match : dataSnapshot.getChildren()){
+                        if (match.child("Value").getValue().equals("1")){
+
+                        FetchMatchInformation(match.getKey());
+                        }}
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+    private void FetchMatchInformation(final String key) {
         DatabaseReference userDb = FirebaseDatabase.getInstance().getReference().child("Users").child(key);
         userDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
+                    DatabaseReference chatDb = FirebaseDatabase.getInstance().getReference().child("Chat");
                     String userId = dataSnapshot.getKey();
                     String name = "";
                     String profileImageUrl = "";
-                    if(dataSnapshot.child("name").getValue()!=null){
+                    if (dataSnapshot.child("name").getValue() != null) {
                         name = dataSnapshot.child("name").getValue().toString();
                     }
-                    if(dataSnapshot.child("profileImageUrl").getValue()!=null){
+                    if (dataSnapshot.child("profileImageUrl").getValue() != null) {
                         profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
                     }
                     MatchesObject obj = new MatchesObject(userId, name, profileImageUrl);
@@ -105,8 +147,52 @@ public class Matches extends AppCompatActivity {
             }
         });
     }
+
+    private void FetchChatInformation(String key) {
+        DatabaseReference userDb = FirebaseDatabase.getInstance().getReference().child("Users").child(key);
+        userDb.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    String userId = dataSnapshot.getKey();
+                    String last = "";
+                    String name = "";
+                    String profileImageUrl = "";
+                    if (dataSnapshot.child("connections").child("matches").child(cusrrentUserID).child("last").getValue() != null)
+                    {
+                        last = dataSnapshot.child("connections").child("matches").child(cusrrentUserID).child("last").getValue().toString();
+
+                    }
+                    if(dataSnapshot.child("name").getValue()!=null){
+                        name = dataSnapshot.child("name").getValue().toString();
+                    }
+
+                    if(dataSnapshot.child("profileImageUrl").getValue()!=null){
+                        profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
+                    }
+                    ChatListObject obj = new ChatListObject(userId, name, profileImageUrl,last);
+                    resultsChatList.add(obj);
+                    mChatlistAdapter.notifyDataSetChanged();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+    }
+
+
+
+
     private ArrayList<MatchesObject> resultsMatches = new ArrayList<MatchesObject>();
+    private ArrayList<ChatListObject> resultsChatList = new ArrayList<ChatListObject>();
+    private List<ChatListObject> getDataSetChatList() {
+        return resultsChatList;
+    }
     private List<MatchesObject> getDataSetMatches() {
         return resultsMatches;
     }
+
 }
+
+

@@ -4,6 +4,7 @@
     <item name="button" type="id" />
     <item name="sex" type="id" />
     <item name="matchsAgebtn" type="id" />
+    <item name="MatchId" type="id" />
 
 
 </resources>

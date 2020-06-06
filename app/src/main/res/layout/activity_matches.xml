@@ -10,7 +10,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemTextColor="#FFFFFF"
+        app:itemIconSize="50sp"
         app:itemIconTint="#FFFFFF"
         android:id="@+id/menu"
         android:background="#45072F"
@@ -20,9 +20,17 @@
         android:id="@+id/recyclerView"
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="150sp"
         android:layout_below="@+id/menu"
-
+            android:padding="15dp"
         android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recyclerView"
+        android:layout_marginTop="5dp"
+        android:padding="15dp"></androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

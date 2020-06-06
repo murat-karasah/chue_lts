@@ -10,15 +10,13 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#45072F"
+        app:itemIconSize="50sp"
         app:itemIconTint="#FFFFFF"
-        app:itemTextColor="#FFFFFF"
-        app:menu="@menu/menu">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        android:id="@+id/menu"
+        android:background="#45072F"
+        app:menu="@menu/menu"/>
 
     <ScrollView
         android:layout_width="match_parent"

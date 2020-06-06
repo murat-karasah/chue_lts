@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ChatActivity">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconSize="50sp"
+        app:itemIconTint="#FFFFFF"
+        android:id="@+id/menu"
+        android:background="#45072F"
+        app:menu="@menu/menu"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu"
+        android:layout_above="@+id/sendLayout">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"
+            android:scrollbars="vertical">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/sendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_weight="0.8"
+            android:layout_width="0dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="wrap_content"
+            android:hint="Mesaj..."
+            android:id="@+id/message"
+            />
+        <ImageView
+            android:src="@drawable/baseline_send_black_36"
+            android:tint="@color/white"
+            android:background="@drawable/send_button_bg"
+            android:padding="12dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="Gönder"
+
+            android:id="@+id/send"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
