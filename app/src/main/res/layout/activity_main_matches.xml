@@ -19,7 +19,16 @@
          android:background="#45072F"
          app:menu="@menu/menu"/>
 
-
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="200sp"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:text="Yakınlarda kimse yok"
+        android:visibility="gone" />
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
         android:id="@+id/frame"
         android:layout_width="match_parent"

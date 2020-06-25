@@ -24,6 +24,7 @@
 
         <EditText
             android:id="@+id/name"
+            style="@style/BaseEditText"
             android:layout_width="250dp"
             android:layout_height="43dp"
             android:layout_gravity="center"
@@ -39,11 +40,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
                 android:text="Kadın"
+
 
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="#FFFFFF"
@@ -65,6 +68,7 @@
             android:layout_width="250dp"
             android:layout_height="43dp"
             android:layout_gravity="center"
+            style="@style/BaseEditText"
 
             android:layout_margin="15dp"
             android:autofillHints=""
@@ -78,6 +82,7 @@
 
         <EditText
             android:id="@+id/pass"
+            style="@style/BaseEditText"
             android:layout_width="250dp"
             android:layout_height="43dp"
             android:layout_gravity="center"

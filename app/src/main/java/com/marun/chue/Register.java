@@ -122,7 +122,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        mAuth.removeAuthStateListener(firebaseAuthStateListener);
-        progressdialog.dismiss();
+      mAuth.removeAuthStateListener(firebaseAuthStateListener);
+    //    progressdialog.dismiss();
     }
 }

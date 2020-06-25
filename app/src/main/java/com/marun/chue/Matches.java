@@ -13,6 +13,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +34,7 @@ public class Matches extends AppCompatActivity {
     private String currentUserID;
     private RecyclerView.LayoutManager mMatchesLayoutManager;
     private String cusrrentUserID;
+    private TextView empty_view,empty_view2;
     BottomNavigationView mMenu;
 
     @Override
@@ -58,6 +61,8 @@ public class Matches extends AppCompatActivity {
         });
         cusrrentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         mRecyclerViewChatList = (RecyclerView) findViewById(R.id.recyclerViewChatList);
+        empty_view = (TextView) findViewById(R.id.empty_view);
+        empty_view2 = (TextView) findViewById(R.id.empty_view);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
      //   mRecyclerView.setNestedScrollingEnabled(false);
@@ -94,6 +99,10 @@ public class Matches extends AppCompatActivity {
                         FetchChatInformation(match.getKey());
                     } }
                 }
+
+                    empty_view2.setVisibility(View.VISIBLE);
+
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -114,6 +123,10 @@ public class Matches extends AppCompatActivity {
                         FetchMatchInformation(match.getKey());
                         }}
                 }
+
+                    empty_view.setVisibility(View.VISIBLE);
+
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {

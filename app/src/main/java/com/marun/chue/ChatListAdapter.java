@@ -40,6 +40,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListViewHolders> {
        if(!chatListList.get(position).getProfileImageUrl().equals("default")){
            Glide.with(context).load(chatListList.get(position).getProfileImageUrl()).into(holder.mMatchImage);
        }
+
     }
 
     @Override

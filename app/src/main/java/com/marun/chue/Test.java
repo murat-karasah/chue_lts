@@ -222,7 +222,7 @@ public class Test extends AppCompatActivity {
                     sNeu= "+";
                 }
                chars = sExt +sOpe+sAgr+ sCon;
-                Toast.makeText(Test.this, "Selected Radio Button is:" + sExt +sOpe+sAgr+ sCon , Toast.LENGTH_LONG).show();
+                Toast.makeText(Test.this, "PROFİLİNİZ OLUŞTURULDU..." , Toast.LENGTH_LONG).show();
                 saveUserInfromation();
             }
             private void saveUserInfromation() {

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".Test">
 
     <ScrollView
@@ -22,7 +21,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:orientation="vertical">
 
 
@@ -31,6 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                style="@style/TestTextStyle"
+
                 android:text="1-Toplantıların gözdesiyimdir." />
 
             <RadioGroup
@@ -38,40 +38,43 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
-
                 android:orientation="horizontal">
 
                 <RadioButton
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
+                    style="@style/TestRadioButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="3" />
 
                 <RadioButton
+                    style="@style/TestRadioButtonStyle"
                     android:layout_width="53dp"
                     android:layout_height="match_parent"
                     android:text="4" />
 
                 <RadioButton
+                    style="@style/TestRadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="5" />
             </RadioGroup>
 
             <TextView
+                style="@style/TestTextStyle"
                 android:id="@+id/ask2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,26 +94,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -119,9 +127,8 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
-
                 android:text="3-İşlerin doğru yapılmasını sağlarım." />
 
             <RadioGroup
@@ -136,27 +143,32 @@
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -165,7 +177,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="4-Ruhsal dengem sık bozulur." />
 
@@ -174,34 +186,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
-
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -210,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="5-Olayları zihnimde canlandırmakta zorlanmam." />
 
@@ -219,7 +235,6 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
                 android:orientation="horizontal">
@@ -227,26 +242,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -255,6 +275,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="6-Çok konuşkan biri değilimdir." />
 
@@ -270,26 +291,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -298,6 +324,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="7-Başkalarının sorunlarıyla ilgilenmiyorum." />
 
@@ -313,26 +340,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -341,6 +373,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="8-Genellikle eşyaları yerine koymayı unuturum." />
 
@@ -356,26 +389,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -384,6 +422,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="9-Genelde rahatımdır." />
 
@@ -399,26 +438,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -427,6 +471,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="10-Soyut fikirlerle ilgilenmem." />
 
@@ -442,26 +487,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -470,6 +520,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="11-Toplantılarda birçok farklı insanla konuşurum." />
 
@@ -485,26 +536,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -513,6 +569,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="12-Başkalarının duygularını hissederim." />
 
@@ -528,26 +585,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -556,6 +618,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="13-Düzeni severim." />
 
@@ -571,26 +634,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -599,6 +667,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="14-Moralim çabuk bozulur." />
 
@@ -614,26 +683,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -642,39 +716,47 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="15-Soyut fikirleri kavramakta zorlanırım." />
 
             <RadioGroup
                 android:id="@+id/radioAsk15"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -683,6 +765,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="16-Arka planda kalmayı tercih ederim." />
 
@@ -698,26 +781,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -726,6 +814,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="17-Başkalarıyla pek ilgilenmem." />
 
@@ -741,26 +830,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -769,6 +863,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="18-İşleri karmakarışık yaparım." />
 
@@ -784,26 +879,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -811,6 +911,7 @@
                 android:id="@+id/ask19"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
+                style="@style/TestTextStyle"
                 android:gravity="center"
                 android:layout_height="wrap_content"
                 android:text="19-Nadiren kendimi sıkıntılı hissederim." />
@@ -827,26 +928,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 
@@ -855,6 +961,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                style="@style/TestTextStyle"
                 android:layout_height="wrap_content"
                 android:text="20-Hayal gücüm kuvvetli değildir." />
 
@@ -870,26 +977,31 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="1" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="2" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="3" />
 
                 <RadioButton
-                    android:layout_width="53dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="4" />
 
                 <RadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TestRadioButtonStyle"
                     android:text="5" />
             </RadioGroup>
 

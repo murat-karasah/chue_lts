@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -36,6 +38,7 @@ public class MainMatchesActivity extends AppCompatActivity {
     private DatabaseReference usersDb;
     ListView listView;
     List<cards> rowItems;
+    private TextView empty_view;
     BottomNavigationView mMenu;
 
     @Override
@@ -70,15 +73,25 @@ public class MainMatchesActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         currentUId = mAuth.getCurrentUser().getUid();
         checkUserSex();
+
+        empty_view = (TextView) findViewById(R.id.empty_view);
+
         rowItems = new ArrayList<cards>();
         arrayAdapter = new arrayAdapter(this, R.layout.item, rowItems);
+
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
         flingContainer.setAdapter(arrayAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
+
             @Override
             public void removeFirstObjectInAdapter() {
                 Log.d("LIST", "removed object!");
                 rowItems.remove(0);
+               if ( rowItems.size()==0)
+               {
+                   empty_view.setVisibility(View.VISIBLE);
+
+               }
                 arrayAdapter.notifyDataSetChanged();
             }
 
@@ -101,12 +114,15 @@ public class MainMatchesActivity extends AppCompatActivity {
 
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
+                arrayAdapter.notifyDataSetChanged();
+                Log.d("LIST", "notified");
             }
 
             @Override
             public void onScroll(float scrollProgressPercent) {
             }
         });
+
         // Optionally add an OnItemClickListener
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
@@ -134,6 +150,7 @@ public class MainMatchesActivity extends AppCompatActivity {
                     usersDb.child(dataSnapshot.getKey()).child("connections").child("matches").child(currentUId).child("Value").setValue(keys);
                     usersDb.child(currentUId).child("connections").child("matches").child(dataSnapshot.getKey()).child("Value").setValue(keys);
                 }
+
             }
 
             @Override
@@ -190,7 +207,11 @@ public class MainMatchesActivity extends AppCompatActivity {
                         }
                         getOppositeSexUsers();
                     }
+
+
+
                 }
+
             }
 
             @Override
@@ -203,7 +224,9 @@ public class MainMatchesActivity extends AppCompatActivity {
         usersDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 for (DataSnapshot snap : dataSnapshot.getChildren()) {
+
                     if (isSuitableForUser(snap)) {
 
                         String profileImageUrl = "default";
@@ -214,7 +237,9 @@ public class MainMatchesActivity extends AppCompatActivity {
                         rowItems.add(item);
                         arrayAdapter.notifyDataSetChanged();
                     }
-                }
+                    }
+                rowItems.size();
+
             }
 
             @Override
@@ -259,10 +284,14 @@ public class MainMatchesActivity extends AppCompatActivity {
                 return true;
             }
             return false;
-        } else {
+        }
+
+        else {
             return false;
         }
+
     }
+
 
 
 }

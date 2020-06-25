@@ -25,12 +25,38 @@
             android:padding="15dp"
         android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
 
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_below="@+id/menu"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="Yeni eşleşen bir profil yok"
+        android:visibility="gone" />
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/recyclerViewChatList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/recyclerView"
+
         android:layout_marginTop="5dp"
-        android:padding="15dp"></androidx.recyclerview.widget.RecyclerView>
+
+        android:padding="15dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/empty_view2"
+        android:layout_below="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="25sp"
+
+        android:visibility="gone"
+        android:text="Gösterilecek bir mesajınız yok"
+        />
 
 </RelativeLayout>

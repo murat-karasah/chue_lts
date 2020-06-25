@@ -87,15 +87,21 @@ public class AddProfile extends AppCompatActivity {
         userInfo.put("Profile","2");
         if(age.isEmpty() ){
             Toast.makeText(AddProfile.this,"Yaş boş bırakılamaz", Toast.LENGTH_LONG).show();
+            progressdialog.dismiss();
+
             return;
         }
         if(info.isEmpty() ){
-            Toast.makeText(AddProfile.this,"Hakkında", Toast.LENGTH_LONG).show();
+            Toast.makeText(AddProfile.this,"Hakkında boş bırakılamaz ", Toast.LENGTH_LONG).show();
+            progressdialog.dismiss();
+
             return;
         }
         mCostomerDatabase.updateChildren(userInfo);
         if (resultUri == null){
             Toast.makeText(AddProfile.this,"Lütfen profil resmi giriniz", Toast.LENGTH_LONG).show();
+            progressdialog.dismiss();
+
             return;
         }
             if (resultUri != null){
@@ -146,9 +152,5 @@ public class AddProfile extends AppCompatActivity {
             final Uri imageUri = data.getData();
             resultUri = imageUri;
             mImage.setImageURI(resultUri);    }}
-    public void exit(View view){
-        mAuth.signOut();
-        Intent intent = new Intent(AddProfile.this,MainActivity.class);
-        startActivity(intent);
-        finish();}
+
 }
