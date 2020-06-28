@@ -57,12 +57,13 @@ public class Matches extends AppCompatActivity {
                         startActivity(intent3);                        return true;
                 }
                 return false;
+
             }
         });
         cusrrentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         mRecyclerViewChatList = (RecyclerView) findViewById(R.id.recyclerViewChatList);
         empty_view = (TextView) findViewById(R.id.empty_view);
-        empty_view2 = (TextView) findViewById(R.id.empty_view);
+        empty_view2 = (TextView) findViewById(R.id.empty_view2);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
      //   mRecyclerView.setNestedScrollingEnabled(false);
@@ -81,13 +82,34 @@ public class Matches extends AppCompatActivity {
         mRecyclerView.setAdapter(mMatchesAdapter);
         getUserMatchId();
         getChat();
+        getControl();
+
+
+
 
 
     }
 
+    private void getControl() {
+        if(mMatchesAdapter.getItemCount() == 0) {
+            empty_view.setVisibility(View.VISIBLE);
+        }if(mMatchesAdapter.getItemCount() != 0) {
+
+
+        }
+        if(resultsChatList.size() == 0) {
+
+            empty_view2.setVisibility(View.VISIBLE);
+
+        }
+       else{
+            empty_view2.setVisibility(View.GONE);
+        }
+    }
 
 
     private void getChat() {
+
         DatabaseReference matchDb = FirebaseDatabase.getInstance().getReference().child("Users").child(cusrrentUserID).child("connections").child("matches");
         matchDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -95,22 +117,25 @@ public class Matches extends AppCompatActivity {
                 if (dataSnapshot.exists()){
                     for(DataSnapshot match : dataSnapshot.getChildren()){
                         if (match.child("Value").getValue().equals("2")){
-
+                            empty_view2.setVisibility(View.GONE);
                         FetchChatInformation(match.getKey());
                     } }
+
                 }
 
-                    empty_view2.setVisibility(View.VISIBLE);
-
-
             }
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
+
         });
+
+
     }
 
     private void getUserMatchId() {
+
         DatabaseReference matchDb = FirebaseDatabase.getInstance().getReference().child("Users").child(cusrrentUserID).child("connections").child("matches");
         matchDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -119,19 +144,22 @@ public class Matches extends AppCompatActivity {
 
                     for(DataSnapshot match : dataSnapshot.getChildren()){
                         if (match.child("Value").getValue().equals("1")){
-
+                            empty_view.setVisibility(View.GONE);
                         FetchMatchInformation(match.getKey());
                         }}
                 }
 
-                    empty_view.setVisibility(View.VISIBLE);
-
 
             }
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
+
         });
+
+
+
     }
 
     private void FetchMatchInformation(final String key) {
@@ -153,6 +181,9 @@ public class Matches extends AppCompatActivity {
                     MatchesObject obj = new MatchesObject(userId, name, profileImageUrl);
                     resultsMatches.add(obj);
                     mMatchesAdapter.notifyDataSetChanged();
+
+
+
                 }
             }
             @Override
@@ -186,21 +217,27 @@ public class Matches extends AppCompatActivity {
                     ChatListObject obj = new ChatListObject(userId, name, profileImageUrl,last);
                     resultsChatList.add(obj);
                     mChatlistAdapter.notifyDataSetChanged();
+
+
                 }
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+
     }
 
 
 
 
     private ArrayList<MatchesObject> resultsMatches = new ArrayList<MatchesObject>();
+
     private ArrayList<ChatListObject> resultsChatList = new ArrayList<ChatListObject>();
     private List<ChatListObject> getDataSetChatList() {
         return resultsChatList;
+
     }
     private List<MatchesObject> getDataSetMatches() {
         return resultsMatches;
